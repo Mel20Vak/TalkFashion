@@ -1,0 +1,30 @@
+// Outfit Style Checker Program in TalkFashion Language
+func main() {
+    print("TalkFashion Style Checker")
+    print("-------------------------")
+
+    var inputStr: String = input("Enter how many outfit scores to check: ")
+    var max: Int = parseInt(inputStr)
+
+    runStyleCheck(max)
+}
+
+func parseInt(str: String) -> Int {
+    return str;
+}
+
+func runStyleCheck(max: Int) {
+    for (var i = 1; i <= max; i = i + 1) {
+        if (i % 15 == 0) {
+            print("Chic & Bold Outfit")
+        } else if (i % 3 == 0) {
+            print("Trendy Style")
+        } else if (i % 5 == 0) {
+            print("Business Casual")
+        } else {
+            print("Style Score " + i)
+        }
+    }
+}
+
+main()

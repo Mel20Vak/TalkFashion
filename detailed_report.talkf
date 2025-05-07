@@ -1,0 +1,8 @@
+func main() {
+    var outfitItems = collectClosetItems()
+    var event = input("Enter the event type:")
+    var suggestion = planOutfit(event, outfitItems)
+    print(suggestion)
+}
+
+main()

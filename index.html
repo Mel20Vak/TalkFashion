@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TalkFashion by Melanie V</title>
+  <style>
+    :root {
+      --primary-color: #1f3b4d;
+      --secondary-color: #a261cf;
+      --accent-color: #7fe3c2;
+      --bg-color: #f5f7fa;
+      --text-color: #2e2e2e;
+      --code-bg: #eef2f5;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--text-color);
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    header {
+      text-align: center;
+      padding: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(to right, var(--accent-color), var(--secondary-color));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: var(--secondary-color);
+    }
+
+    section {
+      margin-bottom: 3rem;
+      padding: 1.5rem;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+      color: var(--primary-color);
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 0.5rem;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .feature-card {
+      background-color: var(--bg-color);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature-card h3 {
+      color: var(--secondary-color);
+      margin-top: 0;
+    }
+
+    pre {
+      background-color: var(--code-bg);
+      padding: 1rem;
+      border-radius: 5px;
+      overflow-x: auto;
+      font-family: 'Consolas', 'Monaco', monospace;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: var(--primary-color);
+      color: white;
+      border-radius: 8px;
+    }
+
+    .footer-links a {
+      color: var(--accent-color);
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>TalkFashion Programming Language</h1>
+      <p class="subtitle">The programming language that helps you stay in style — Created by Melanie V</p>
+    </header>
+
+    <section>
+      <h2>Overview</h2>
+      <p><strong>Name:</strong> TalkFashion</p>
+      <p><strong>Purpose:</strong> A domain-specific language (DSL) for generating outfit suggestions based on user-provided clothing items and event type.</p>
+      <p><strong>Target Domain:</strong> Personal styling apps, virtual wardrobe assistants, event preparation tools.</p>
+      <p><strong>Problem Solved:</strong> Simplifies the process of planning appropriate outfits by matching available clothes to specific events.</p>
+    </section>
+
+    <section>
+      <h2>Design & Syntax</h2>
+      <h3>Variables</h3>
+      <pre><code>var top: String = input("Enter top item:")
+var bottom: String = input("Enter bottom item:")
+var shoes: String = input("Enter shoes:")
+var event: String = input("Enter event type:")</code></pre>
+
+      <h3>Control Structures</h3>
+      <pre><code>if (event == "business") {
+    suggest outfit top + bottom + shoes
+} else {
+    suggest outfit casualCollection
+}</code></pre>
+
+      <h3>Functions</h3>
+      <pre><code>func planOutfit(event: String, items: List&lt;String&gt;) -&gt; Outfit {
+    // returns best outfit suggestion based on event type and items
+}</code></pre>
+    </section>
+
+    <section>
+      <h2>Semantics</h2>
+      <ul>
+        <li><strong>Data Types:</strong> String, List&lt;String&gt;, Outfit, Bool</li>
+        <li><strong>Scoping:</strong> Lexical with support for nested blocks</li>
+        <li><strong>Execution Model:</strong> Interpreted via AST traversal; event-driven evaluation model</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Features</h2>
+      <div class="features">
+        <div class="feature-card">
+          <h3>Outfit Type</h3>
+          <p>Built-in <code>Outfit</code> type bundles clothing items together for easy suggestions.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Smart Matching</h3>
+          <p>Matches outfits smartly to event types with customizable rules.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Color Coordination</h3>
+          <p>Style-level utilities for color and fashion harmony.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Sample Programs</h2>
+      <h3>1. Hello World</h3>
+      <pre><code>func main() {
+    print("Welcome to TalkFashion!")
+}</code></pre>
+
+      <h3>2. Basic Outfit Suggestion</h3>
+      <pre><code>func main() {
+    var top: String = input("Top:")
+    var bottom: String = input("Bottom:")
+    var shoes: String = input("Shoes:")
+    var event: String = input("Event:")
+    suggest outfit top + bottom + shoes for event
+}</code></pre>
+
+      <h3>3. Event-Based Style Helper</h3>
+      <pre><code>func main() {
+    var closet: List&lt;String&gt; = collectClosetItems()
+    var event: String = input("Event:")
+    var recommendation: Outfit = planOutfit(event, closet)
+    print(recommendation)
+}</code></pre>
+    </section>
+
+    <section>
+      <h2>Ecosystem</h2>
+      <ul>
+        <li><strong>VSCode Extension:</strong> Syntax highlighting, code snippets, outfit preview popup</li>
+        <li><strong>CLI Interpreter:</strong> <code>talkfashion</code> for running scripts</li>
+        <li><strong>Standard Library:</strong> Clothing categories, event matchers, style suggestions</li>
+        <li><strong>Testing Framework:</strong> <code>fashion-test</code> for validating outfit logic</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Challenges</h2>
+      <ul>
+        <li>Accurate matching for subjective fashion choices</li>
+        <li>Flexible yet simple recommendation engine</li>
+        <li>Ensuring inclusivity across styles and cultures</li>
+        <li>Encouraging adoption among non-programmers</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>TalkFashion Programming Language &copy; 2025 — Created by Melanie V</p>
+      <div class="footer-links">
+        <a href="#features">Features</a>
+        <a href="#examples">Sample Programs</a>
+        <a href="#overview">Overview</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

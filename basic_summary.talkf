@@ -1,0 +1,11 @@
+// Basic Outfit Suggestion Program
+func main() {
+    var top: String = input("Top:")
+    var bottom: String = input("Bottom:")
+    var shoes: String = input("Shoes:")
+    var event: String = input("Event Type:")
+
+    suggest outfit top + bottom + shoes for event
+}
+
+main();

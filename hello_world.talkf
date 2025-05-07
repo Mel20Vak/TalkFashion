@@ -1,0 +1,6 @@
+// Hello World Program in TalkFashion Language
+func main() {
+    print("Welcome to TalkFashion Programming Language!")
+}
+
+main()

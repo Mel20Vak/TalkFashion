@@ -1,0 +1,20 @@
+Model:
+    statements*=Statement
+;
+
+Statement:
+    UserOutfit | Suggest
+;
+
+UserOutfit:
+    'user' name=ID '{'
+        'top:' top=STRING
+        'bottom:' bottom=STRING
+        'shoes:' shoes=STRING
+        'event:' event=STRING
+    '}'
+;
+
+Suggest:
+    'suggest outfit for' name=ID
+;

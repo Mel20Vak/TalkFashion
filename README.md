@@ -30,10 +30,10 @@ Whether you’re dressing for a formal event, a casual outing, or a business mee
 ### Setup
 
 1. Clone the repository:
-2. 
+   
 git clone https://github.com/melanievaknin/talkfashion-language.git
 
-3. Navigate to the project directory:
+2. Navigate to the project directory:
 
 cd talkfashion-language
 
